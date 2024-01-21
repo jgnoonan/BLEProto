@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "E9408E20-3A69-481D-A958-F34A48EBC39F"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "71688937-751A-43F3-ABBB-366EDDBCBDAB"
+            shouldBeEnabled = "Yes"
+            nameForDebugger = "Break1"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BLEProto/BLEConnection.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "centralManager(_:didDiscover:advertisementData:rssi:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E24C760B-52DC-4D1D-9128-74A394C49CE6"
+            shouldBeEnabled = "Yes"
+            nameForDebugger = "Break2"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BLEProto/BLEConnection.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "centralManager(_:didConnect:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

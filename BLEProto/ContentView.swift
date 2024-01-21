@@ -2,20 +2,43 @@
 //  ContentView.swift
 //  BLEProto
 //
-//  Created by Joseph Noonan on 1/18/24.
+//  Created by Joseph Noonan on 1/21/24.
 //
 
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var bluetoothManager = BluetoothManager()
+   
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView {
+            List(bluetoothManager.peripheralDevices, id: \.self) { device in
+                if device.name != nil {
+                    NavigationLink(destination: DeviceDetailView(device: device)) {
+                    
+                        Text(device.name ?? "Unknown Device")
+                            .font(.subheadline)
+                            .frame(width: 150, alignment: .leading)
+                        
+                        if device.state == .connected {
+                            Image(systemName: "star.fill")
+                                .font(.title)
+                                .frame(width: 150, alignment: .center)
+                        } else {
+                            Image(systemName: "star")
+                                .font(.title)
+                                .frame(width: 150, alignment: .center)
+                        }
+                    }
+                }
+            }
+            .navigationBarTitle("Bluetooth Devices")
         }
-        .padding()
+        .padding(.leading, 10)
+        .onAppear {
+            // The central manager is already initialized in BluetoothManager
+        }
     }
 }
 
