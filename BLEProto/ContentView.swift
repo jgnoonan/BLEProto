@@ -19,7 +19,7 @@ struct ContentView: View {
                     
                         Text(device.name ?? "Unknown Device")
                             .font(.subheadline)
-                            .frame(width: 150, alignment: .leading)
+                            .frame(maxWidth: .infinity, alignment: .leading)
                         
                         if device.state == .connected {
                             Image(systemName: "star.fill")
